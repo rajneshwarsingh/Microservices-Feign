@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "1f20b6c7-0765-49e4-8b58-367bf4f26667",
+		"name": "Microservices-Feign",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11235604"
+	},
+	"item": [
+		{
+			"name": "Product APIs",
+			"item": [
+				{
+					"name": "product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyYTc0M2MwZS0yYzYyLTQ1YTYtYjRmOS1hZmFiYmU5MGI4NjAiLCJpYXQiOjE3MTE2MDY2MTcsImV4cCI6MTcxMTYxMDIxN30.IuFqNOZQPST015NGD-cQllART9lE9yLYCs-Xv9tQi74",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/product/?limit=10&page=1&sortBy=createdAt&sort=-1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"product",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								},
+								{
+									"key": "sort",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyYTc0M2MwZS0yYzYyLTQ1YTYtYjRmOS1hZmFiYmU5MGI4NjAiLCJpYXQiOjE3MTEwMTI0NDAsImV4cCI6MTcxMTAxNjA0MH0.dYjotS4bP59pvz1QqKfSxPAJ3WZ8jNO-CKsy1AmwoqU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"S243\",\n    \"description\":\"samsung\",\n    \"price\":\"32000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8005/v1/product/",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"v1",
+								"product",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "createdAt",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "-1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyYTc0M2MwZS0yYzYyLTQ1YTYtYjRmOS1hZmFiYmU5MGI4NjAiLCJpYXQiOjE3MTEwMTI0NDAsImV4cCI6MTcxMTAxNjA0MH0.dYjotS4bP59pvz1QqKfSxPAJ3WZ8jNO-CKsy1AmwoqU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"S243\",\n    \"description\":\"samsung\",\n    \"price\":\"32000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8005/v1/product/1aefb6d8-81ee-474b-ad47-ef1639436b58",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"v1",
+								"product",
+								"1aefb6d8-81ee-474b-ad47-ef1639436b58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyYTc0M2MwZS0yYzYyLTQ1YTYtYjRmOS1hZmFiYmU5MGI4NjAiLCJpYXQiOjE3MTEwMTI0NDAsImV4cCI6MTcxMTAxNjA0MH0.dYjotS4bP59pvz1QqKfSxPAJ3WZ8jNO-CKsy1AmwoqU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/v1/product/1aefb6d8-81ee-474b-ad47-ef1639436b58",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"v1",
+								"product",
+								"1aefb6d8-81ee-474b-ad47-ef1639436b58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userProductList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkMmJiNDlkZC1iODY5LTQ0MDMtYjNjNy0wNzI1YjBkYzA2MjAiLCJpYXQiOjE3NjI0MzY3NTIsImV4cCI6MTc2MjQ0MDM1Mn0.60SWyLdFOKrupyJ3XoVL4QyaVhwuOgk0AhMOG8nGSRM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/product/userProductList/?limit=10&page=1&sortBy=createdAt&sort=-1&userId=d2bb49dd-b869-4403-b3c7-0725b0dc0620",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"product",
+								"userProductList",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								},
+								{
+									"key": "sort",
+									"value": "-1"
+								},
+								{
+									"key": "userId",
+									"value": "d2bb49dd-b869-4403-b3c7-0725b0dc0620"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User APIs",
+			"item": [
+				{
+					"name": "user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyYTc0M2MwZS0yYzYyLTQ1YTYtYjRmOS1hZmFiYmU5MGI4NjAiLCJpYXQiOjE3MTE2MDQzMzksImV4cCI6MTcxMTYwNzkzOX0.CC7QR-X2M1v7OZJj221PrwZGZHu-QSDwwSBVjmmR4JQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/user/?limit=10&page=1&sortBy=createdAt&sort=-1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								},
+								{
+									"key": "sort",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Ravi Kumar\",\n    \"age\":\"23\",\n    \"email\":\"ravi1235@yopmail.com\",\n    \"password\":\"Qwerty@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/user/signUp",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"user",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"ravi1235@yopmail.com\",\n    \"password\":\"Qwerty@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyYTc0M2MwZS0yYzYyLTQ1YTYtYjRmOS1hZmFiYmU5MGI4NjAiLCJpYXQiOjE3MTE2MDQzMzksImV4cCI6MTcxMTYwNzkzOX0.CC7QR-X2M1v7OZJj221PrwZGZHu-QSDwwSBVjmmR4JQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Ravi Singh\",\n    \"age\":\"27\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/user/4eb4f46b-f07e-4808-9a29-656643ecbff2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"user",
+								"4eb4f46b-f07e-4808-9a29-656643ecbff2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyYTc0M2MwZS0yYzYyLTQ1YTYtYjRmOS1hZmFiYmU5MGI4NjAiLCJpYXQiOjE3MTE2MDQzMzksImV4cCI6MTcxMTYwNzkzOX0.CC7QR-X2M1v7OZJj221PrwZGZHu-QSDwwSBVjmmR4JQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/user/4eb4f46b-f07e-4808-9a29-656643ecbff2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"user",
+								"4eb4f46b-f07e-4808-9a29-656643ecbff2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyToken",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkMmJiNDlkZC1iODY5LTQ0MDMtYjNjNy0wNzI1YjBkYzA2MjAiLCJpYXQiOjE3NjIzMjg0OTIsImV4cCI6MTc2MjMzMjA5Mn0.FDcZzOZjeVh2IGlZotXU28yjm6vc3m3zXDFCNyPJH1Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/user/auth/verifyToken",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"user",
+								"auth",
+								"verifyToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkMmJiNDlkZC1iODY5LTQ0MDMtYjNjNy0wNzI1YjBkYzA2MjAiLCJpYXQiOjE3NjI0MzUxMjksImV4cCI6MTc2MjQzODcyOX0.TdveFYiWuRn2gluvyWr9mV8kG_p6KuAQ4Sxgf2Sh3PM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/user/productList/?limit=10&page=1&sortBy=createdAt&sort=-1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"user",
+								"productList",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								},
+								{
+									"key": "sort",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
